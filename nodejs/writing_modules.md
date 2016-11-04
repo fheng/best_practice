@@ -46,6 +46,12 @@ Here is the same piece of code but now using some of these dependencies.
     function myBusinessLogic(dbModel,config, httpClient){
         const myPrivateValue = "this is mine";
         
+        //private function 
+        function myPrivateFunction (){
+            //some non exposed business logic 
+            return "this is also mine";
+        }
+
         return{
             "doSomething": function (cb){
                 if (!config.myBusinessLogic.enabled){
