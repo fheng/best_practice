@@ -1,4 +1,4 @@
-There are many patterns for writing modules within node. Here are some that we believe to have 
+There are many patterns for writing modules within node. Here is one that we believe to have 
 good value and reflect how we believe code should look and be written.
 
 ## The module pattern. 
