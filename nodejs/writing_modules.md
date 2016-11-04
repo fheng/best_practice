@@ -63,8 +63,8 @@ Here is the same piece of code but now using some of these dependencies.
     }
 ```
 
-Why do this? By externalising our dependencies, we allow for simpler and more maintainable unit testing. We also communicate clearly to the clients of our api, that this module is
-going to do something with the database or with the network (as an example).
+Why do this? By externalising our dependencies and injecting them into the function, we allow for simpler and more maintainable unit testing. We also communicate clearly to the clients of our api, that this module is
+going to do something with the database or with the network (as an example). Also more specific to express, notice that there is no middleware present in business logic, there is also no reference to a request or response object, it is independant of the transport. 
 
 ### How does this help with testing?
 
@@ -102,3 +102,11 @@ By externalising our dependencies in this way it becomes clearer what our module
 an object that implements the correct interface. Finally returning our clean api from our function allows us to clearly undersand what this module does 
 and distinguish its business logic (public api), from the dependencies it requires in order to achieve this. 
 
+### What about when the number of dependencies grow?
+
+Once the number of dependencies for a module grow, there are a couple of considerations.
+
+1) Has my module actually grown to be more than one module? As in is it time to split it up into 2 modules?
+
+2) Is it time to use an object whose keys are now the dependencies? As a rough guide, if you have more than 4 injected dependencies,
+then consider using a params object. 
