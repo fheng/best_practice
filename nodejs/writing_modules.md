@@ -14,6 +14,7 @@ Here is an example of what this looks like in practice, remembering we are worki
         
         return{
             "doSomething": function (cb){
+                //do something async....
                 return cb(undefined,myPrivateValue);
             },
             "doSomethingElse":function (val,cb){
