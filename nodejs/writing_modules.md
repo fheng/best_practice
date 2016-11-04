@@ -30,7 +30,7 @@ Here is an example of what this looks like in practice, remembering we are worki
 This pattern allows for simple enhancement, and adding additional dependencies as needed. In many ways it is similar to how 
 you might think about a class in another language. The function is a constructor and the returned object is the instance.
 
-## Externalise Dependencies 
+## Use dependency injection 
 
 By dependencies we are not talking about ``` require('async') ``` but rather things that your code depends on that are external to the code.
 What do I mean? 
