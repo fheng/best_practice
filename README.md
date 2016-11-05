@@ -1,4 +1,4 @@
-# best_practice
+# Best Practice
 Aims to gather best practices and code review standards for the technologies we use.
 
 ## Node.js
