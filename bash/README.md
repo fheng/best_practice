@@ -9,11 +9,8 @@ and google style guide:
 
 https://google.github.io/styleguide/shell.xml
 
-If anything is not mentioned explicitly in this guide, 
-it defaults to google style guide which we recommend to everyone who starting with bash.
+If anything is not mentioned explicitly in this guide, it defaults to google style guide.
 
-Formating
-----------
 
 ### Functions
 
