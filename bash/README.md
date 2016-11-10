@@ -1,15 +1,15 @@
 # Bash style guide
 
-This style guide would outline how to write bash scripts.
+This style guide would outlines how to write bash scripts.
 This guide is based on:
 
 http://mywiki.wooledge.org/BashGuide/Practices
 
-and google style guide:
+and Google style guide:
 
 https://google.github.io/styleguide/shell.xml
 
-If anything is not mentioned explicitly in this guide, it defaults to google style guide.
+If anything is not mentioned explicitly in this guide, it defaults to Google style guide.
 
 
 ### Functions
@@ -55,11 +55,10 @@ fi
 ### Spacing
 
 No more than 2 consecutive newline characters (ie. no more than 1 blank line in a row)
-Use spaces over the tabs.
 
 ### Comments
 
-No explicit style guide for comments.  Don't change someones comments for aesthetic reasons
+No explicit style guide for comments.  Don't change someone's comments for aesthetic reasons
 unless you are rewriting or updating them.
 
 
@@ -148,8 +147,7 @@ done
 
 ### Cat usage
 
-Don't use `cat(1)` when you don't need it.  If programs support reading from stdin,
-pass the data in using bash redirection.
+Don't use `cat(1)` when you don't need it.  
 
 ``` bash
 # wrong
@@ -162,7 +160,7 @@ grep foo < file
 grep foo file
 ```
 
-Prefer using a command line tools builtin method of reading a file instead of
+Prefer using a command line tool's builtin method of reading a file instead of
 passing in stdin.  This is where we make the inference that, if a program says
 it can read a file passed by name, it's probably more performant to do so.
 
@@ -217,7 +215,7 @@ Even though `$printf_date_supported` undergoes word-splitting in the `if`
 statement in that example, quotes are not used because the contents of that
 variable are controlled explicitly and not taken from a user or command.
 
-Also, variables like `$$`, `$?`, `$#`, etc. don't required quotes because they
+Also, variables like `$$`, `$?`, `$#`, etc. don't require quotes because they
 will never contain spaces, tabs, or newlines.
 
 When in doubt however, [quote all expansions](http://mywiki.wooledge.org/Quotes).
@@ -267,6 +265,6 @@ rm file
 
 ### `set -e`
 
-Always check if your script should exit on error - in most of the cases it should to prevent from bugs.
+Always check if your script should exit on error - in most cases it should help prevent bugs.
 Like in C, sometimes you want an error, or you expect something to fail, and that doesn't necessarily mean you want the program
 to exit.
