@@ -6,50 +6,79 @@ We are currently using JSHint for JavaScript linting, but are leaning towards re
 
 Below is our standard ESLint configs for our Node.js & Browser components
 
-```
-{
-  "env": {
-    "es6": true,
-    "node": true,
-    "mocha": true
-  },
-  "extends": "eslint:recommended",
-  "rules": {
-    "array-callback-return": "warn",
-    "brace-style": ["error", "1tbs"],
-    "complexity": ["warn", 20],
-    "eqeqeq": "error",
-    "guard-for-in": "error",
-    "indent": ["error", 2],
-    "linebreak-style": ["error", "unix"],
-    "no-array-constructor": "error",
-    "no-console": "warn",
-    "no-lonely-if": "warn",
-    "no-loop-func": "warn",
-    "no-mixed-spaces-and-tabs": ["error"],
-    "no-nested-ternary": "error",
-    "no-spaced-func": "error",
-    "no-trailing-spaces": "error",
-    "semi": ["error", "always"],
-    "space-before-blocks": "error",
-    "space-before-function-paren": ["error", "never"],
-    "keyword-spacing": ["error"],
-    "curly": ["error", "all"],
-    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
-    "no-const-assign": "error",
-    "no-use-before-define": ["error", "nofunc"],
-    "block-scoped-var": "error",
-    "prefer-const": "error",
-    "prefer-template": "warn",
-    "template-curly-spacing": ["error", "never"],
-    "no-confusing-arrow": ["error", {"allowParens": true}],
-    "arrow-parens": ["error", "as-needed"],
-    "arrow-body-style": ["error", "as-needed"],
-    "generator-star-spacing": ["error", "after"],
-    "require-yield": "error"
-  }
-}
+```yaml
+extends: 'eslint:recommended'
 
+env:
+  es6: true
+  node: true
+  mocha: true
+
+rules:
+
+  # Warnings only
+  complexity:
+    - warn
+    - 20
+  no-console: warn
+  no-lonely-if: warn
+  no-loop-func: warn
+  prefer-template: warn
+  array-callback-return: warn
+
+  # Errors
+  indent:
+    - error
+    - 2
+  curly:
+    - error
+    - all
+  semi:
+    - error
+    - always
+  brace-style:
+    - error
+    - 1tbs
+  arrow-parens:
+    - error
+    - as-needed
+  linebreak-style:
+    - error
+    - unix
+  arrow-body-style:
+    - error
+    - as-needed
+  no-confusing-arrow:
+    - error
+    - allowParens: true
+  no-use-before-define:
+    - error
+    - nofunc
+  template-curly-spacing:
+    - error
+    - never
+  generator-star-spacing:
+    - error
+    - after
+  no-unused-vars:
+    - error
+    - argsIgnorePattern: next
+  space-before-function-paren:
+    - error
+    - never
+  eqeqeq: error
+  prefer-const: error
+  guard-for-in: error
+  require-yield: error
+  no-spaced-func: error
+  keyword-spacing: error
+  no-const-assign: error
+  block-scoped-var: error
+  no-nested-ternary: error
+  no-trailing-spaces: error
+  space-before-blocks: error
+  no-array-constructor: error
+  no-mixed-spaces-and-tabs: error
 ```
 
 There are two small differences for Browser components, the rest is the same:
