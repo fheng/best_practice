@@ -42,7 +42,7 @@ Below is our standard ESLint configs for our Node.js & Browser components
     "prefer-const": "error",
     "prefer-template": "warn",
     "template-curly-spacing": ["error", "never"],
-    "no-confusing-arrow": ["error", {allowParens: true}],
+    "no-confusing-arrow": ["error", {"allowParens": true}],
     "arrow-parens": ["error", "as-needed"],
     "arrow-body-style": ["error", "as-needed"],
     "generator-star-spacing": ["error", "after"],
