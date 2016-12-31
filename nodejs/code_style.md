@@ -305,11 +305,6 @@ over:
 This rule generates warnings for generator functions that do not have
 the yield keyword.
 
-## Java Code Style
-
-* Indent with 2 soft tabs (spaces), no hard tabs
-* Our brace style is 1TBS - see https://en.wikipedia.org/wiki/Indent_style#Variant:_1TBS
-
 ## Documentation Comments in JavaScript
 
 We use [JSDoc](http://usejsdoc.org/) to add documentation comments in JavaScript. Please read about it if you haven't used it before.
