@@ -4,7 +4,7 @@ We are currently using JSHint for JavaScript linting, but are leaning towards re
 
 ### ESLint
 
-Below is our standard ESLint configs for our Node.js & Browser components
+Below is our standard ESLint configs (`.eslintrc.json`) for our Node.js & Browser components
 
 ```
 {
