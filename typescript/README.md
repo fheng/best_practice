@@ -8,7 +8,25 @@ This guide is based on [Microsoft/TypeScript/wiki/Coding-guidelines](https://git
 4. Use camelCase for property names and local variables.
 6. Do not use "_" as a prefix for private properties.
 7. Use whole words in names when possible.
+## Filenames
+Filename should be exactly the name of the exported class or default export.
+```
+// file contents
+class CheckBox {
+// ...
+}
+export default CheckBox;
 
+// in some other file
+// bad
+import CheckBox from './checkBox';
+
+// bad
+import CheckBox from './check_box';
+
+// good
+import CheckBox from './CheckBox';
+```
 
 ## Components
 1 file per logical component (e.g. parser, scanner, emitter, checker).
