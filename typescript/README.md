@@ -10,7 +10,7 @@ This guide is based on [Microsoft/TypeScript/wiki/Coding-guidelines](https://git
 7. Use whole words in names when possible.
 ## Filenames
 Filename should be exactly the name of the exported class or default export.
-```
+```typescript
 // file contents
 class CheckBox {
 // ...
